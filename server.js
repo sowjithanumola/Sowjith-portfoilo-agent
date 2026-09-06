@@ -10,7 +10,7 @@ app.use(express.json());
 // Serve static files
 app.use(express.static('.'));
 
-const LYZR_API_KEY = 'sk-default-IEBvkuwYTh2jj3UkI2r74NE1lDnWZoKL';
+const LYZR_API_KEY = process.env.LYZR_API_KEY;';
 const LYZR_ENDPOINT = 'https://voice-livekit.studio.lyzr.ai/v1/sessions/start';
 
 app.post('/api/voice-session', async (req, res) => {
